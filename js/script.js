@@ -26,6 +26,10 @@ FSJS project 1 - A Random Quote Generator
      `quotes` array.
 ***/
 
+function getRandomQuote() {
+  var randomNumber = Math.floor(Math.random() * quotes.length);
+  return quotes[randomNumber];
+}
 
 
 
