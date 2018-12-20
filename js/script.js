@@ -43,7 +43,19 @@ function getRandomQuote() {
    - set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
 
-
+function printQuote() {
+  var randomQuote = getRandomQuote();
+  var message = '';
+  message += "<p class='quote'>" + randomQuote.quote + "</p>";
+  message += "<p class='source'>" + randomQuote.source + "</p>";
+  if (randomQuote.citation) {
+    message += "<p class='citation'>" + randomQuote.citation + "</p>";
+  }
+  if (randomQuote.year) {
+    message += "<p class='year'>" + randomQuote.year + "</p>";
+  }
+  document.getElementById("quote-box").innerHTML = message;
+}
 
 
 /***
